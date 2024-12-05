@@ -1,0 +1,57 @@
+{
+  "name": "react-global-message",
+  "version": "0.0.4",
+  "description": "react全局消息通知组件",
+  "main": "dist/index.js",
+  "source": "src/index.ts",
+  "unpkg": "dist/index.umd.js",
+  "module": "dist/index.es.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "!src",
+    "!.storybook",
+    "!rollup.config.js",
+    "dist"
+  ],
+  "scripts": {
+    "build": "rimraf dist && rollup -c --bundleConfigAsCjs",
+    "prepublish": "yarn build",
+    "sb": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
+  },
+  "keywords": [
+    "react",
+    "message"
+  ],
+  "author": "ahuzsp@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.26.0",
+    "@babel/preset-react": "^7.25.9",
+    "@babel/preset-typescript": "^7.26.0",
+    "@chromatic-com/storybook": "^3.2.2",
+    "@storybook/addon-actions": "^8.4.6",
+    "@storybook/addon-links": "^8.4.6",
+    "@storybook/addon-webpack5-compiler-babel": "^3.0.3",
+    "@storybook/addons": "^7.6.17",
+    "@storybook/cli": "^8.4.6",
+    "@storybook/react": "^8.4.6",
+    "@storybook/react-webpack5": "^8.4.6",
+    "@types/node": "^22.10.1",
+    "@types/react": "^18.3.12",
+    "babel-loader": "^9.2.1",
+    "react": "^18",
+    "react-dom": "^18",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.28.0",
+    "rollup-plugin-css-only": "^4.5.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-typescript2": "^0.36.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.7.2"
+  },
+  "peerDependencies": {
+    "react": "^18",
+    "react-dom": "^18"
+  }
+}
