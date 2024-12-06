@@ -1,6 +1,6 @@
 {
   "name": "react-global-message",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "react全局消息通知组件",
   "main": "dist/index.js",
   "source": "src/index.ts",
@@ -8,10 +8,9 @@
   "module": "dist/index.es.js",
   "types": "dist/index.d.ts",
   "files": [
-    "!src",
-    "!.storybook",
-    "!rollup.config.js",
-    "dist"
+    "dist",
+    "package.json",
+    "README.md"
   ],
   "scripts": {
     "build": "rimraf dist && rollup -c --bundleConfigAsCjs",
@@ -21,9 +20,19 @@
   },
   "keywords": [
     "react",
-    "message"
+    "message",
+    "component",
+    "react-component"
   ],
-  "author": "ahuzsp@gmail.com",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ahuzsp/react-global-message.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ahuzsp/react-global-message/issues"
+  },
+  "homepage": "https://github.com/Ahuzsp/react-global-message",
+  "author": "shoupingzhang <ahuzsp@gmail.com>",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.26.0",
@@ -40,12 +49,13 @@
     "@types/node": "^22.10.1",
     "@types/react": "^18.3.12",
     "babel-loader": "^9.2.1",
+    "cssnano": "^7.0.6",
     "react": "^18",
     "react-dom": "^18",
     "rimraf": "^6.0.1",
     "rollup": "^4.28.0",
-    "rollup-plugin-css-only": "^4.5.2",
     "rollup-plugin-node-resolve": "^5.2.0",
+    "rollup-plugin-postcss": "^4.0.2",
     "rollup-plugin-typescript2": "^0.36.0",
     "ts-loader": "^9.5.1",
     "typescript": "^5.7.2"
