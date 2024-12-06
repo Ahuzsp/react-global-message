@@ -1,6 +1,6 @@
 {
   "name": "react-global-message",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "react全局消息通知组件",
   "main": "dist/index.js",
   "source": "src/index.ts",
