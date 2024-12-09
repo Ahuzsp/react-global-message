@@ -13,11 +13,15 @@ const Message: React.FC<MessageProps> = ({
   duration
 }) => {
   const [visible, setVisible] = useState(true)
+  const [fadeOut, setFadeOut] = useState(false)
   const timerRef = useRef<NodeJS.Timeout | null>(null)
 
   useEffect(() => {
     timerRef.current = setTimeout(() => {
+      setTimeout(() => {
         setVisible(false)
+      }, 500);
+      setFadeOut(true)
     }, duration)
 
     return () => {
@@ -29,7 +33,7 @@ const Message: React.FC<MessageProps> = ({
 
   if (!visible) return null
 
-  return <div className={`massage-container ${type}`}>{message}</div>
+  return <div className={`massage-container fade-in ${type} ${fadeOut ? 'fade-out' : ''}`}>{message}</div>
 }
 
 export default Message
